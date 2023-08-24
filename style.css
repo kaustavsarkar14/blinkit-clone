@@ -1,3 +1,8 @@
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
 .location>h5 {
     color: rgb(0, 0, 0);
     font-weight: 800;
