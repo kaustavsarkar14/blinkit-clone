@@ -63,7 +63,7 @@ nav {
     width: 100vw;
     /* background-color: blue; */
 }
-.my-container, .category-section{
+.my-container{
     width: 82%;
     margin: auto;
     padding-block: 1rem;
@@ -87,14 +87,20 @@ nav {
 }
 
 .my-list {
-    white-space: nowrap;
-    /* display: flex; */
+    white-space: normal;
+    display: flex;
+    gap: 20px;
+    /* overflow-x: auto; */
+}
+.my-list>.my-card {
+    width: 200px !important;
 }
 .my-list>img {
     padding-right: 10px;
 }
 .my-card {
-    width: 300px;
+    width: 300px !important;
+    flex: 0 0 200px;
 }
 .my-card-time {
     width: fit-content;
@@ -125,4 +131,85 @@ nav {
     color: rgb(31, 31, 31);
     font-weight: 700;
     font-size: 12px;
+}
+.category-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.category-container{
+    width: 83%;
+    overflow: auto;
+    margin: auto;
+}
+/* footer */
+.my-footer {
+    width: 83%;
+    margin: auto;
+    text-align: justify;
+}
+
+.row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-section>img {
+    height: 2rem;
+}
+.social-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.social {
+    display: flex;
+    gap: 1rem;
+}
+.row-1{
+    display: flex;
+}
+.useful-links {
+    flex: 2;
+}
+.categories-links{
+    flex: 3;
+}
+table{
+    width: 100%;
+}
+td {
+    padding-block: 3px;
+}
+
+@media screen and (max-width: 768px){
+    nav {
+        flex-direction: column;
+    }
+    .vertical-line{
+        display: none;
+    }
+    .hero-section>img {
+        display: none;
+    }
+    .row-2>p{
+        width: 90%;
+    }
+    .my-footer{
+        flex-direction: column;
+    }
+    .row-2,.row-1{
+        flex-direction: column;
+    }
+    td{
+        font-size: small;
+        margin-left: 5px;
+    }
 }
